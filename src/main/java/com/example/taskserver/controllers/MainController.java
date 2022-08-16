@@ -38,7 +38,7 @@ public class MainController {
     @PostMapping("/addTask")
     public String addTask(@RequestParam @Valid String name, @RequestParam @Valid String text, BindingResult bindingResult) throws BindException {
         log.info("Start main controller, method post, input parametr name {}, text {}", name, text);
-        if(bindingResult.hasErrors()){
+        if (bindingResult.hasErrors()) {
             log.info("Validation error");
             throw new BindException(bindingResult);
         }

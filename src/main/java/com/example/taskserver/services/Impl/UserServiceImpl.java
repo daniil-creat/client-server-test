@@ -6,7 +6,6 @@ import com.example.taskserver.model.TaskStatus;
 import com.example.taskserver.model.User;
 import com.example.taskserver.repository.UserRepository;
 import com.example.taskserver.services.UserService;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.security.core.Authentication;

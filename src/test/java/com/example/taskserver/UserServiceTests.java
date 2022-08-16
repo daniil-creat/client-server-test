@@ -1,8 +1,6 @@
 package com.example.taskserver;
 
 import com.example.taskserver.model.Role;
-import com.example.taskserver.model.Task;
-import com.example.taskserver.model.TaskStatus;
 import com.example.taskserver.model.User;
 import com.example.taskserver.repository.TaskRepository;
 import com.example.taskserver.repository.UserRepository;
@@ -16,8 +14,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.test.context.support.WithMockUser;
 
 import java.util.Collections;
-import java.util.Date;
-import java.util.Set;
 
 @SpringBootTest(properties = "application.properties")
 @AutoConfigureMockMvc
@@ -59,7 +55,7 @@ public class UserServiceTests {
     }
 
     @Test
-    @WithMockUser(roles = "USER",username = "Dan")
+    @WithMockUser(roles = "USER", username = "Dan")
     void getAuthUserTest() {
         User user = new User();
         user.setUsername("Dan");

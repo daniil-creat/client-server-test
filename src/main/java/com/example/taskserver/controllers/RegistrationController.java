@@ -28,7 +28,7 @@ public class RegistrationController {
     @PostMapping("/registration")
     public String addUser(@Valid User user, BindingResult bindingResult, Map<String, Object> model) throws BindException {
         log.info("Start registration controller, method post, input user {}", user);
-        if(bindingResult.hasErrors()){
+        if (bindingResult.hasErrors()) {
             log.info("Validation error");
             throw new BindException(bindingResult);
         }
